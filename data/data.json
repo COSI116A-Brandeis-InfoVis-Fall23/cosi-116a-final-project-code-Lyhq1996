@@ -1,0 +1,182 @@
+[
+    {
+        "year": 2017,
+        "state": "CT",
+        "homeless": 3,
+        "medianRent": 1279
+    },
+    {
+        "year": 2017,
+        "state": "MA",
+        "homeless": 17,
+        "medianRent": 1162
+    },
+    {
+        "year": 2017,
+        "state": "ME",
+        "homeless": 2,
+        "medianRent": 878
+    },
+    {
+        "year": 2017,
+        "state": "NH",
+        "homeless": 1,
+        "medianRent": 1172
+    },
+    {
+        "year": 2017,
+        "state": "RI",
+        "homeless": 1,
+        "medianRent": 1184
+    },
+    {
+        "year": 2017,
+        "state": "VT",
+        "homeless": 1,
+        "medianRent": 1042
+    },
+    {
+        "year": 2018,
+        "state": "CT",
+        "homeless": 3,
+        "medianRent": 1354
+    },
+    {
+        "year": 2018,
+        "state": "MA",
+        "homeless": 20,
+        "medianRent": 1265
+    },
+    {
+        "year": 2018,
+        "state": "ME",
+        "homeless": 2,
+        "medianRent": 881
+    },
+    {
+        "year": 2018,
+        "state": "NH",
+        "homeless": 1,
+        "medianRent": 1168
+    },
+    {
+        "year": 2018,
+        "state": "RI",
+        "homeless": 1,
+        "medianRent": 1307
+    },
+    {
+        "year": 2018,
+        "state": "VT",
+        "homeless": 1,
+        "medianRent": 1051
+    },
+    {
+        "year": 2019,
+        "state": "CT",
+        "homeless": 3,
+        "medianRent": 1334
+    },
+    {
+        "year": 2019,
+        "state": "MA",
+        "homeless": 18,
+        "medianRent": 1305
+    },
+    {
+        "year": 2019,
+        "state": "ME",
+        "homeless": 2,
+        "medianRent": 951
+    },
+    {
+        "year": 2019,
+        "state": "NH",
+        "homeless": 1,
+        "medianRent": 1180
+    },
+    {
+        "year": 2019,
+        "state": "RI",
+        "homeless": 1,
+        "medianRent": 1357
+    },
+    {
+        "year": 2019,
+        "state": "VT",
+        "homeless": 1,
+        "medianRent": 1023
+    },
+    {
+        "year": 2020,
+        "state": "CT",
+        "homeless": 2,
+        "medianRent": 1383
+    },
+    {
+        "year": 2020,
+        "state": "MA",
+        "homeless": 17,
+        "medianRent": 1338
+    },
+    {
+        "year": 2020,
+        "state": "ME",
+        "homeless": 2,
+        "medianRent": 884
+    },
+    {
+        "year": 2020,
+        "state": "NH",
+        "homeless": 1,
+        "medianRent": 1153
+    },
+    {
+        "year": 2020,
+        "state": "RI",
+        "homeless": 1,
+        "medianRent": 1375
+    },
+    {
+        "year": 2020,
+        "state": "VT",
+        "homeless": 1,
+        "medianRent": 1064
+    },
+    {
+        "year": 2021,
+        "state": "CT",
+        "homeless": 2,
+        "medianRent": 1491
+    },
+    {
+        "year": 2021,
+        "state": "MA",
+        "homeless": 15,
+        "medianRent": 1374
+    },
+    {
+        "year": 2021,
+        "state": "ME",
+        "homeless": 2,
+        "medianRent": 995
+    },
+    {
+        "year": 2021,
+        "state": "NH",
+        "homeless": 1,
+        "medianRent": 1226
+    },
+    {
+        "year": 2021,
+        "state": "RI",
+        "homeless": 1,
+        "medianRent": 1437
+    },
+    {
+        "year": 2021,
+        "state": "VT",
+        "homeless": 2,
+        "medianRent": 1046
+    }
+]
