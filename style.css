@@ -82,4 +82,8 @@ h1, h2, h3 {
 .linechart-holder {
 	flex: 0 0 50%;
   }
-  
+
+/* The line chart 2 will take the right half of the screen */
+.linechart2-holder {
+	flex: 1;
+}

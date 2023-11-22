@@ -1,3 +1,4 @@
+
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
         width = 460 - margin.left - margin.right,
@@ -11,7 +12,8 @@
       .append("g")
         .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
-    
+ 
+
     //Read the data
     d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered.csv", function(data) {
     
@@ -28,13 +30,21 @@
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x).ticks(5));
     
+      
+
+
+
       // Add Y axis
       var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return +d.n; })])
         .range([ height, 0 ]);
       svg.append("g")
         .call(d3.axisLeft(y));
+      
+
+      
     
+
       // color palette
       var res = sumstat.map(function(d){ return d.key }) // list of group names
       var color = d3.scaleOrdinal()

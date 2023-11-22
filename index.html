@@ -63,6 +63,7 @@
     
 
     <!-- line charts test -->
+    
     <div id="linechart"></div>
 
   </div>
@@ -125,7 +126,10 @@
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="lib/d3.v4/d3.v4.js"></script>
   <script>
-
+    d3.select('#linechart')
+      .append('h3')
+      .text("Median Monthly Rent in New England Area")
+    
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
         width = 460 - margin.left - margin.right,
@@ -140,6 +144,25 @@
         .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
     
+    // X-axis Label
+    svg.append("text")
+        .attr("class", "x-axis-label")
+        .attr("text-anchor", "end")
+        .attr("x", width)
+        .attr("y", height + margin.top + 20) 
+
+        .text("Year");
+
+    // Y-axis Label
+    svg.append("text")
+        .attr("class", "y-axis-label")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left + 20) // Adjust the position as needed
+        .attr("x", -margin.top)
+        .text("Median Monthly Rent");
+
+
     //Read the data
     d3.csv("data/raw-merged-data.csv", function(data) {
     
