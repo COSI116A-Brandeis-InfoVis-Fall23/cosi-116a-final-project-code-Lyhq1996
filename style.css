@@ -1,18 +1,22 @@
 /* General formatting */
 body {
-	padding: 0 10px;
-	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next",avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans",
-	sans-serif;
+  padding: 0 10px;
+  font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
+    roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
+    "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
 }
 
-h1, h2, h3 {
-	line-height: 1.2
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 /* Your text should be in a nice narrow column */
 .content-column {
-	max-width: 650px;
-	margin: 40px auto;
+  max-width: 650px;
+  margin: 40px auto;
 }
 
 /* But your visualization should be full-width and full-height */
@@ -21,117 +25,118 @@ h1, h2, h3 {
   height: 100%;
 }
 
-/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */  
-#forkongithub a{
-	background:#00F;
-	color:#fff;
-	text-decoration:none;
-	font-family:arial,sans-serif;
-	text-align:center;
-	font-weight:bold;
-	padding:5px 40px;
-	font-size:1rem;
-	line-height:1.4rem;
-	position:relative;
-	transition:0.5s;
+/* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
+#forkongithub a {
+  background: #00f;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 40px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  position: relative;
+  transition: 0.5s;
 }
-#forkongithub a:hover{
-	background:#118;
-	color:#fff;
+#forkongithub a:hover {
+  background: #118;
+  color: #fff;
 }
-#forkongithub a::before,#forkongithub a::after{
-	content:"";
-	width:100%;
-	display:block;
-	position:absolute;
-	top:1px;
-	left:0;
-	height:1px;
-	background:#fff;
+#forkongithub a::before,
+#forkongithub a::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
 }
-#forkongithub a::after{
-	bottom:1px;
-	top:auto;
+#forkongithub a::after {
+  bottom: 1px;
+  top: auto;
 }
-@media screen and (min-width:1000px){
-	#forkongithub{
-		position:fixed;
-		display:block;
-		top:0;
-		right:0;
-		width:200px;
-		overflow:hidden;
-		height:200px;
-		z-index:9999;
-	}
-	#forkongithub a{
-		width:200px;
-		position:absolute;
-		top:60px;
-		right:-60px;
-		transform:rotate(45deg);
-		-webkit-transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg);
-		-o-transform:rotate(45deg);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
-	}
+@media screen and (min-width: 1000px) {
+  #forkongithub {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 9999;
+  }
+  #forkongithub a {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    right: -60px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  }
 }
 
 /* The line chart will take the left half of the screen */
 .linechart-holder {
-	flex: 0 0 50%;
-  }
+  flex: 0 0 50%;
+}
 
 /* The line chart 2 will take the right half of the screen */
 .linechart2-holder {
-	flex: 1;
+  flex: 1;
 }
 
 /* Styling for map */
-.state{
-	fill: none;
-	stroke: #a9a9a9;
-	stroke-width: 1;
+.state {
+  fill: none;
+  stroke: #a9a9a9;
+  stroke-width: 1;
 }
-.state:hover{
-	fill-opacity:0.5;
+.state:hover {
+  fill-opacity: 0.5;
 }
-#tooltip {   
-	position: absolute;           
-	text-align: center;
-	padding: 20px;             
-	margin: 10px;
-	font: 12px sans-serif;        
-	background: lightsteelblue;   
-	border: 1px;      
-	border-radius: 2px;           
-	pointer-events: none;         
+#tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 1px;
+  border-radius: 2px;
+  pointer-events: none;
 }
-#tooltip h4{
-	margin:0;
-	font-size:14px;
+#tooltip h4 {
+  margin: 0;
+  font-size: 14px;
 }
-#tooltip{
-	background:rgba(0,0,0,0.9);
-	border:1px solid grey;
-	border-radius:5px;
-	font-size:12px;
-	width:auto;
-	padding:6px;
-	color:white;
-	opacity:0;
+#tooltip {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 12px;
+  width: auto;
+  padding: 6px;
+  color: white;
+  opacity: 0;
 }
-#tooltip table{
-	table-layout:fixed;
+#tooltip table {
+  table-layout: fixed;
 }
-#tooltip tr td{
-	padding:0;
-	margin:0;
+#tooltip tr td {
+  padding: 0;
+  margin: 0;
 }
-#tooltip tr td:nth-child(1){
-	width:50px;
+#tooltip tr td:nth-child(1) {
+  width: 50px;
 }
-#tooltip tr td:nth-child(2){
-	text-align:center;
+#tooltip tr td:nth-child(2) {
+  text-align: center;
 }
