@@ -141,3 +141,4 @@ const dataByState = {};
 /* draw states on id #stateMap */
 uStates.draw("#stateMap", dataByState, tooltipHtml);
 d3.select(self.frameElement).style("height", "600px");
+

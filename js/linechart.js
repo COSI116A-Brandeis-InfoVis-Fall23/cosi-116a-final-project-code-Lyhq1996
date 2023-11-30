@@ -72,6 +72,8 @@ d3.csv("data/raw-merged-data.csv", function (data) {
     .range([height, 0]);
   svg.append("g").call(d3.axisLeft(y));
 
+
+
   // color palette
   var res = sumstat.map(function (d) {
     return d.key;
@@ -111,5 +113,41 @@ d3.csv("data/raw-merged-data.csv", function (data) {
         .y(function (d) {
           return y(+d.medianRent);
         })(d.values);
-    });
+    }); 
+
+
+    // Add brushing functionality
+  const brush = d3
+  .brushX() // Assuming horizontal brushing for the X-axis
+  .extent([[0, 0], [width, height]]) // Define the brush area
+  .on("end", brushed); // Define the function to call on brush end
+
+  svg.append("g")
+    .attr("class", "brush")
+    .call(brush); // Attach the brush to the SVG
+
+  function brushed() {
+    const selectedData = [];
+
+    if (!d3.event.selection) return;
+
+    const [x0, x1] = d3.event.selection.map(x.invert); // Get brushed area
+    svg.selectAll(".line")
+      .classed("selected", function (d) {
+        // Highlight lines within the brushed area
+        const line = d.values.find((point) => {
+          return x(point.year) >= x0 && x(point.year) <= x1;
+        });
+
+        if (line) {
+          selectedData.push(line);
+          return true;
+        }
+        return false;
+      });
+
+    // Notify another line chart about the selected data
+    const dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+    dispatcher.call(dispatchString, this, selectedData);
+  }
 });
