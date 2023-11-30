@@ -1,3 +1,6 @@
+# COSI 116A GRAD 2 webpage link:
+https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-final-project-code-Lyhq1996/
+
 # COSI 116A Final Project Template
 
 This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
@@ -12,8 +15,8 @@ For your final project, you must render your project as a Github Page.  Github p
 
 To publish your repository, follow the instructions at https://pages.github.com/.  You'll have to go to the settings of your repository and point GitHub Pages to your master branch.  Your GitHub Pages link will be of the following format:
 
-    https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-12-mbta
-
+[    https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-12-mbta
+](https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-final-project-code-Lyhq1996/)
 Note that you may have to clear your cache and reload (Ctrl+F5 on Chrome) a few times before seeing your page.
 
 
