@@ -5,7 +5,11 @@ d3.select("#linechart")
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 30, bottom: 30, left: 60 },
   width = 460 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+  height = 400 - margin.top - margin.bottom,
+  ourBrush = null,
+  selectableElements = d3.select(null),
+  dispatcher;
+
 
 // append the svg object to the body of the page
 var svg = d3
@@ -115,24 +119,25 @@ d3.csv("data/raw-merged-data.csv", function (data) {
 
 
 // Add the points
-svg
-.selectAll(".dot") // Select existing elements with class "dot" (if any)
-.data(sumstat) // Bind data to these elements
-.enter()
-.append("g")
-.attr("class", "dot") // Append a new group for each data point
-.selectAll("circle")
-.data(function (d) {
-  return d.values; // Access the nested data array for each line
-})
-.enter()
-.append("circle")
-.attr("r", 6)
-.attr("cx", function (d) {
-  return x(d.year); // Use the x scale to position the circles on the x-axis
-})
-.attr("cy", function (d) {
-  return y(+d.medianRent); // Use the y scale to position the circles on the y-axis
-});
+let points = svg
+  .selectAll(".dot") // Select existing elements with class "dot" (if any)
+  .data(sumstat) // Bind data to these elements
+  .enter()
+  .append("g")
+  .attr("class", "dot") // Append a new group for each data point
+  .selectAll("circle")
+  .data(function (d) {
+    return d.values; // Access the nested data array for each line
+  })
+  .enter()
+  .append("circle")
+  .attr("r", 5)
+  .attr("cx", function (d) {
+    return x(d.year); // Use the x scale to position the circles on the x-axis
+  })
+  .attr("cy", function (d) {
+    return y(+d.medianRent); // Use the y scale to position the circles on the y-axis
+  });
+
 
 });

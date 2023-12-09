@@ -93,6 +93,13 @@ h3 {
   flex: 1;
 }
 
+/* Default style for marks and channels used */
+.dot {
+  fill: white;
+  stroke: #69b3a2;
+  stroke-width: 3;
+}
+
 /* Styling for map */
 .state {
   fill: none;
