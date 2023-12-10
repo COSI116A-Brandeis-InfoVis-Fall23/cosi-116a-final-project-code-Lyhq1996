@@ -31,7 +31,7 @@ const sampleData = [
   {
     year: 2021,
     state: "RI",
-    homeless: 1,
+    homeless: 1267,
     medianRent: 1437,
   },
   {
