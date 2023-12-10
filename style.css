@@ -146,16 +146,7 @@ h3 {
   text-align: center;
 }
 
-#map {
-  position: relative;
-}
 
-#map h3 {
-  position: absolute;
-  top: -540px;
-  left: 950px;
-  /* Other styles for the title */
-}
 
 
 
