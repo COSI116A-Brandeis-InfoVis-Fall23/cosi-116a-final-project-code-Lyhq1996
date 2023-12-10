@@ -148,15 +148,20 @@ h3 {
 
 .homeless-title {
   position: absolute;
-  top: 820px; /* Adjust the top position as needed */
+  top: 640px; /* Adjust the top position as needed */
   left: 50%; /* Position it 50% from the left */
   transform: translateX(-50%); /* Adjust to center horizontally */
 }
 
 #map h3 {
   position: absolute;
-  top: 820px;
+  top: 640px;
   left: 70%;
+}
+
+img {
+  width: 400px;
+  height: auto; /* To maintain aspect ratio */
 }
 
 
