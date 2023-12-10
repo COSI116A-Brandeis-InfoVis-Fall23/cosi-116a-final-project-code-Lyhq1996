@@ -1,4 +1,3 @@
-
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 30, bottom: 30, left: 60 },
   width = 460 - margin.left - margin.right,
@@ -83,7 +82,7 @@ d3.csv("data/raw-merged-data.csv", function (data) {
       "#4daf4a",
       "#984ea3",
       "#ff7f00",
-      "#ffff33",
+      "#A0522D",
       "#a65628",
       "#f781bf",
       "#999999",
@@ -111,29 +110,24 @@ d3.csv("data/raw-merged-data.csv", function (data) {
         })(d.values);
     });
 
-    // Add the points for Homeless Count chart
-let points2 = svg2
-  .selectAll(".dot") // Select existing elements with class "dot" (if any)
-  .data(sumstat) // Bind data to these elements
-  .enter()
-  .append("g")
-  .attr("class", "dot") // Append a new group for each data point
-  .selectAll("circle")
-  .data(function (d) {
-    return d.values; // Access the nested data array for each line
-  })
-  .enter()
-  .append("circle")
-  .attr("r", 4)
-  .attr("cx", function (d) {
-    return x(d.year); // Use the x scale to position the circles on the x-axis
-  })
-  .attr("cy", function (d) {
-    return y(+d.homeless); // Use the y scale to position the circles on the y-axis
-  });
-
-
-
-
-
+  // Add the points for Homeless Count chart
+  let points2 = svg2
+    .selectAll(".dot") // Select existing elements with class "dot" (if any)
+    .data(sumstat) // Bind data to these elements
+    .enter()
+    .append("g")
+    .attr("class", "dot") // Append a new group for each data point
+    .selectAll("circle")
+    .data(function (d) {
+      return d.values; // Access the nested data array for each line
+    })
+    .enter()
+    .append("circle")
+    .attr("r", 4)
+    .attr("cx", function (d) {
+      return x(d.year); // Use the x scale to position the circles on the x-axis
+    })
+    .attr("cy", function (d) {
+      return y(+d.homeless); // Use the y scale to position the circles on the y-axis
+    });
 });

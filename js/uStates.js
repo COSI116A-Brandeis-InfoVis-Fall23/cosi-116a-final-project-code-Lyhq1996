@@ -77,10 +77,6 @@
 
     // Apply the transformation to move the map down by 50 units
     mapGroup.attr("transform", "translate(0, -350) scale(1.5)");
-
   };
   this.uStates = uStates;
-  
 })();
-
-
