@@ -61,17 +61,21 @@
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     
 
-    <!-- line charts test -->
-    
-    <div id="linechart"></div>
+  <!-- Example of parent containers for line charts -->
+    <div class="linechart-holder">
+      <div id="linechart"></div>
+    </div>
+    <div class="linechart2-holder">
+      <h3 class="homeless-title">Homeless Count in New England Area</h3>
+      <div id="linechart2"></div>
+    </div>
 
-    <!-- ess count -->
-    <div id="linechart2"></div>
 
     <!-- Hongqian's Map  -->
     <div id="map">
+      <h3>Monthly Median Rent in 2021</h3>
         <!-- svg to hold the map. -->
-      <svg width="960" height="600" id="stateMap"></svg> 
+      <svg width="960" height="250" id="stateMap"></svg> 
       <!-- div to hold tooltip. -->
       <div id="tooltip"></div>
     </div>
@@ -147,7 +151,7 @@
   <script src="js/uStates.js"></script> 
   <script src="js/map.js"></script> 
   <script src="js/linechart.js"></script> 
-  <script src="js/homelessLineChart.js"></script>
+  <script src="js/linechart2.js"></script>
 
 </body>
 </html>

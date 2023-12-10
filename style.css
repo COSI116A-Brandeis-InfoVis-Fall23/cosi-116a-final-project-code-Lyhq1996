@@ -84,14 +84,12 @@ h3 {
 }
 
 /* The line chart will take the left half of the screen */
-.linechart-holder {
+/* The line chart will take the left half of the screen */
+.linechart-holder,
+.linechart2-holder {
   flex: 0 0 50%;
 }
 
-/* The line chart 2 will take the right half of the screen */
-.linechart2-holder {
-  flex: 1;
-}
 
 /* Default style for marks and channels used */
 .dot {
@@ -147,3 +145,17 @@ h3 {
 #tooltip tr td:nth-child(2) {
   text-align: center;
 }
+
+#map {
+  position: relative;
+}
+
+#map h3 {
+  position: absolute;
+  top: -540px;
+  left: 950px;
+  /* Other styles for the title */
+}
+
+
+

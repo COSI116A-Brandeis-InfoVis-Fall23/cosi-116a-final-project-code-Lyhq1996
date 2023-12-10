@@ -7,25 +7,25 @@ const sampleData = [
   {
     year: 2021,
     state: "CT",
-    homeless: 2,
+    homeless: 2593,
     medianRent: 1491,
   },
   {
     year: 2021,
     state: "MA",
-    homeless: 15,
+    homeless: 15079,
     medianRent: 1374,
   },
   {
     year: 2021,
     state: "ME",
-    homeless: 2,
+    homeless: 2063,
     medianRent: 995,
   },
   {
     year: 2021,
     state: "NH",
-    homeless: 1,
+    homeless: 1491,
     medianRent: 1226,
   },
   {
@@ -37,7 +37,7 @@ const sampleData = [
   {
     year: 2021,
     state: "VT",
-    homeless: 2,
+    homeless: 2591,
     medianRent: 1046,
   },
 ];

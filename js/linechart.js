@@ -15,6 +15,7 @@ var margin = { top: 10, right: 30, bottom: 30, left: 60 },
 var svg = d3
   .select("#linechart")
   .append("svg")
+  .attr("class", "linechart-holder")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
