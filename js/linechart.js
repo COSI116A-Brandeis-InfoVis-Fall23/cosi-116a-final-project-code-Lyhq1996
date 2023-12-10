@@ -117,6 +117,52 @@ d3.csv("data/raw-merged-data.csv", function (data) {
         })(d.values);
     });
 
+  // Calculate the width and height of the legend
+  var legendWidth = 100; // Adjust the width of the legend as needed
+  var legendHeight = res.length * 20; // Adjust the height based on the number of items in the legend
+
+  // Create a legend
+  var legend = svg
+    .append("g")
+    .attr("class", "legend")
+    .attr(
+      "transform",
+      "translate(" +
+        (width - legendWidth - 10) +
+        "," +
+        (height - legendHeight - 10) +
+        ")"
+    );
+
+  // Add colored squares to the legend
+  var legends = legend
+    .selectAll(".legends")
+    .data(res)
+    .enter()
+    .append("g")
+    .attr("class", "legends")
+    .attr("transform", function (d, i) {
+      return "translate(0," + i * 20 + ")";
+    });
+
+  legends
+    .append("rect")
+    .attr("x", legendWidth - 18)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color); // Use the color scale to fill the squares
+
+  // Add text labels to the legend
+  legends
+    .append("text")
+    .attr("x", legendWidth - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function (d) {
+      return d;
+    }); // Display the state name
+
   // Add the points
   let points = svg
     .selectAll(".dot") // Select existing elements with class "dot" (if any)
