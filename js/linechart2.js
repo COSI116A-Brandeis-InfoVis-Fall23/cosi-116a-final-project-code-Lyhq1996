@@ -94,6 +94,7 @@ d3.csv("data/raw-merged-data.csv", function (data) {
     .data(sumstat)
     .enter()
     .append("path")
+    .attr("class", "line") // Add a class to the line for brushing and linking
     .attr("fill", "none")
     .attr("stroke", function (d) {
       return color(d.key);
@@ -107,7 +108,10 @@ d3.csv("data/raw-merged-data.csv", function (data) {
         })
         .y(function (d) {
           return y(+d.homeless);
-        })(d.values);
+        })(d.values)
+    })
+    .on("click", function (event, d) {
+      lineClick(event, d, this, sumstat, x, y)
     });
 
   // Add the points for Homeless Count chart
@@ -131,3 +135,60 @@ d3.csv("data/raw-merged-data.csv", function (data) {
       return y(+d.homeless); // Use the y scale to position the circles on the y-axis
     });
 });
+
+// show exact data points
+const highlightLine = (svgName, stateNumber, propertyName) => {
+  // Display data points for the highlighted line
+  var selectedLinePoints = svgName
+  .selectAll(".dot")
+  .filter(function (d) {
+    return d.key === states[stateNumber];
+  })
+  .selectAll("circle");
+
+  // Add state names next to data points
+  selectedLinePoints.each(function (d) {
+    // Display state name next to the data point
+    svgName
+    .append("text")
+    .attr("class", "state-label")
+    .attr("x", d3.select(this).attr("cx"))
+    .attr("y", d3.select(this).attr("cy")-1)
+    .attr("font-size", "14px")
+    .text(d[propertyName]);
+  });
+}
+
+// Function to handle line click event
+function lineClick(event, lineData, lineElement, sumstat, x, y) {
+// Remove previous selections and data points
+svg2.selectAll(".line").attr("stroke-width", 1.5);
+svg2.selectAll(".state-label").remove();
+
+// Highlight the clicked line
+d3.select(lineElement).attr("stroke-width", 4.5);
+// highlight the line with exact data points
+highlightLine(svg2, lineData, "homeless");
+// Update the other chart based on the selected state
+updateOtherChart(lineData);
+}
+
+// Function to update the other chart
+function updateOtherChart(selectedState) {
+// Access the line elements in the other chart
+var otherChartLines = svg.selectAll(".line");
+
+// Update the stroke width of all lines in the other chart
+otherChartLines.attr("stroke-width", 1.5);
+svg.selectAll(".state-label").remove();
+
+// Find and highlight the selected state line
+var selectedLine = otherChartLines
+  .filter(function (d) {
+    return d.key === states[selectedState];
+  })
+  .attr("stroke-width", 4.5);
+
+  // highlight the line in the other chart with exact data points
+highlightLine(svg, selectedState, "medianRent");
+}

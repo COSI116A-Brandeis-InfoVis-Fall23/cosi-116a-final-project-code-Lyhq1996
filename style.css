@@ -23,6 +23,7 @@ h3 {
 .vis-holder {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
 /* Fork on GitHub ribbon via https://codepo8.github.io/css-fork-on-github-ribbon/# */
@@ -155,13 +156,21 @@ h3 {
 
 #map h3 {
   position: absolute;
-  top: 640px;
-  left: 70%;
+  margin-top:30px;
+  left: 27%;
+}
+
+svg#stateMap {
+  scale: 2.2;
+  margin-top:1010px;
+  margin-left: -1300px; 
 }
 
 img {
-  width: 400px;
+  width: 500px;
   height: auto; /* To maintain aspect ratio */
 }
 
-
+.lineChartsTitle {
+  text-align: center;
+}

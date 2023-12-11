@@ -1,7 +1,4 @@
-d3.select("#linechart")
-  .append("h3")
-  .text("Median Monthly Rent in New England Area");
-
+const states = ["CT", "MA", "ME", "NH", "RI", "VT"];
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 30, bottom: 30, left: 60 },
   width = 460 - margin.left - margin.right,
@@ -101,6 +98,7 @@ d3.csv("data/raw-merged-data.csv", function (data) {
     .data(sumstat)
     .enter()
     .append("path")
+    .attr("class", "line") // Add a class to the line for brushing and linking
     .attr("fill", "none")
     .attr("stroke", function (d) {
       return color(d.key);
@@ -115,6 +113,9 @@ d3.csv("data/raw-merged-data.csv", function (data) {
         .y(function (d) {
           return y(+d.medianRent);
         })(d.values);
+    })
+    .on("click", function (event, d) {
+      lineClick2(event, d, this, sumstat, x, y);
     });
 
   // Calculate the width and height of the legend
@@ -184,3 +185,37 @@ d3.csv("data/raw-merged-data.csv", function (data) {
       return y(+d.medianRent); // Use the y scale to position the circles on the y-axis
     });
 });
+
+// Function to handle line click event
+function lineClick2(event, lineData, lineElement) {
+  // Remove previous selections and data points
+  svg.selectAll(".line").attr("stroke-width", 1.5);
+  svg.selectAll(".state-label").remove();
+
+  // Highlight the clicked line
+  d3.select(lineElement).attr("stroke-width", 4.5);
+  // highlight the line with exact data points
+  highlightLine(svg, lineData, "medianRent");
+  // Update the other chart based on the selected state
+  updateOtherChart2(lineData);
+}
+
+// Function to update the other chart
+function updateOtherChart2(selectedState) {
+  // Access the line elements in the other chart
+  var otherChartLines2 = svg2.selectAll(".line");
+
+  // Update the stroke width of all lines in the other chart
+  otherChartLines2.attr("stroke-width", 1.5);
+  svg2.selectAll(".state-label").remove();
+
+  // Find and highlight the selected state line
+  var selectedLine = otherChartLines2
+    .filter(function (d) {
+      return d.key === states[selectedState];
+    })
+    .attr("stroke-width", 4.5);
+
+    // highlight the line in the other chart with exact data points
+  highlightLine(svg2, selectedState, "homeless");
+}
