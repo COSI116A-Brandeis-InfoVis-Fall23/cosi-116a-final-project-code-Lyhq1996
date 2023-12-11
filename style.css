@@ -161,9 +161,9 @@ h3 {
 }
 
 svg#stateMap {
-  scale: 2.2;
-  margin-top:1010px;
-  margin-left: -1300px; 
+  scale: 2;
+  margin-top:860px;
+  margin-left: -1200px; 
 }
 
 img {
@@ -171,6 +171,7 @@ img {
   height: auto; /* To maintain aspect ratio */
 }
 
-.lineChartsTitle {
+.lineChartsTitle, .mapTitle {
   text-align: center;
 }
+
