@@ -9,6 +9,9 @@ This repository contains the final project for Project Team Grad Group 2 in the 
 - Visualization:
 The visualization includes line charts depicting the trend of Median Monthly Rent and Homeless Count in the New England area for 5 years. Additionally, a map representation illustrates the spatial distribution of Median Monthly Rent, offering a visual gradient to convey rent variations across the region. Interaction (brushing and linking)among different charts was implemented to give audience a clearer idea of the pattern/relationship among different data.
 
+- Interaction:
+There are three graphs on the web page—two line charts depicting the median monthly rent and homeless numbers in all New England states from 2017 to 2021, and a map providing a snapshot of monthly rent and homeless statistics in different New England states for the year 2021. Users have the capability to click on any line in either of the two line charts to view the exact data points and corresponding results in another line chart. This feature enhances the user's understanding of the correlation between housing rent and homelessness. Additionally, for the map, a gradient color is employed to indicate the expense of rent. When users hover over a specific state, detailed statistics about rent and the homeless population will appear.
+
 - Conclusion:
 The project concludes with insights into the impact of the pandemic on homelessness, the rise in family homelessness, and the role of high housing costs in the New England area. Future directions may involve investing in more affordable housing options to prevent further displacement.
 
