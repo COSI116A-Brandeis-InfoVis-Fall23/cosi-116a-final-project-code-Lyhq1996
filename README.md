@@ -3,16 +3,16 @@ https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-final-project-code-
 
 # COSI 116A Final Project: Graduate Group 2
 
-- Overview
+- Overview:
 This repository contains the final project for Project Team Grad Group 2 in the COSI 116A: Information Visualization course at Brandeis University. The project focuses on exploring U.S. housing affordability, with a shift to a more focused study on homeless populations and rent growth correlations. The team aims to offer crucial insights into housing inequality and contribute meaningfully to solutions for challenges faced by the homeless population.
 
-- Visualization
+- Visualization:
 The visualization includes line charts depicting the trend of Median Monthly Rent and Homeless Count in the New England area for 5 years. Additionally, a map representation illustrates the spatial distribution of Median Monthly Rent, offering a visual gradient to convey rent variations across the region. Interaction (brushing and linking)among different charts was implemented to give audience a clearer idea of the pattern/relationship among different data.
 
-- Conclusion
+- Conclusion:
 The project concludes with insights into the impact of the pandemic on homelessness, the rise in family homelessness, and the role of high housing costs in the New England area. Future directions may involve investing in more affordable housing options to prevent further displacement.
 
-- Acknowledgments
+- Acknowledgments:
 The project leverages various resources, including D3: Data-Driven Documents by Mike Bostock, a Pure CSS responsive "Fork me on GitHub" ribbon by Chris Heilmann, and code for a US State Map by NPashaP.
 ## Setup
 
