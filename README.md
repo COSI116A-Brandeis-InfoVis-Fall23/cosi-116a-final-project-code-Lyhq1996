@@ -1,25 +1,19 @@
 # COSI 116A GRAD 2 webpage link:
 https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-final-project-code-Lyhq1996/
 
-# COSI 116A Final Project Template
+# COSI 116A Final Project: Graduate Group 2
 
-This template will help you get started with your project. Please look through all these materials so you know how to organize your project.
+- Overview
+This repository contains the final project for Project Team Grad Group 2 in the COSI 116A: Information Visualization course at Brandeis University. The project focuses on exploring U.S. housing affordability, with a shift to a more focused study on homeless populations and rent growth correlations. The team aims to offer crucial insights into housing inequality and contribute meaningfully to solutions for challenges faced by the homeless population.
 
-## The GitHub Pages Website
+- Visualization
+The visualization includes line charts depicting the trend of Median Monthly Rent and Homeless Count in the New England area for 5 years. Additionally, a map representation illustrates the spatial distribution of Median Monthly Rent, offering a visual gradient to convey rent variations across the region. Interaction (brushing and linking)among different charts was implemented to give audience a clearer idea of the pattern/relationship among different data.
 
-Make sure you publish your project to github pages, and put the URL here: 
+- Conclusion
+The project concludes with insights into the impact of the pandemic on homelessness, the rise in family homelessness, and the role of high housing costs in the New England area. Future directions may involve investing in more affordable housing options to prevent further displacement.
 
-### Github Pages
-
-For your final project, you must render your project as a Github Page.  Github pages is a feature of GitHub repositories that gives you a publicly available URL that loads your repository.  The link to the page corresponding to your repository should be written into the readme file of your repository.
-
-To publish your repository, follow the instructions at https://pages.github.com/.  You'll have to go to the settings of your repository and point GitHub Pages to your master branch.  Your GitHub Pages link will be of the following format:
-
-[    https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-12-mbta
-](https://cosi116a-brandeis-infovis-fall23.github.io/cosi-116a-final-project-code-Lyhq1996/)
-Note that you may have to clear your cache and reload (Ctrl+F5 on Chrome) a few times before seeing your page.
-
-
+- Acknowledgments
+The project leverages various resources, including D3: Data-Driven Documents by Mike Bostock, a Pure CSS responsive "Fork me on GitHub" ribbon by Chris Heilmann, and code for a US State Map by NPashaP.
 ## Setup
 
 **Under no circumstances should you be editing files via the GitHub user interface.** Do all your edits locally after cloning the repository.
@@ -56,23 +50,23 @@ Each folder has an explanatory `README.md` file
 
 * `favicons` contains the favicons for the course projects. You shouldn't change anything here.
 
-* `files` will contain your slides (PDF) and video (MP4).
+* `files` will contain the slides (PDF) and video (MP4).
 
 * `images` will contain your screenshots, diagrams, and photos.
 
-* `js` will contain all JavaScript files you write.
-
-  * `visualization.js` is the main code that builds all your visualizations. Each visualization should be built following the [Reusable Chart model](https://bost.ocks.org/mike/chart/)
+* `js` will contain all JavaScript files for different visualizations (two line charts and a map in our case) and all the interaction logic(brush and linking, hover, etc)
   
-* `lib` will contain any JavaScript library you use. It currently includes D3.
+* `lib` will contain any JavaScript library we use. It currently includes D3.
 
 ## Workflow
 
-As you work with your team, you may have issues merging your changes. We recommend you pick one member of the team to be the project manager and deal with merging any pull requests.
+- Branching Strategy: Each team member creates their feature branch for development based on the main master branch. For example, using a naming convention like feature/your-feature-name.
 
-Instead of all working directly out of the main `master` branch, you can try adopting a Git branching model for development. See, e.g., [this article by Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/) and the included image:
+- Development: Team members work independently on their feature branches, making commits and pushing changes to their respective branches.
 
-![Image of Git branching model by Vincent Driessen](http://www.ccs.neu.edu/home/cody/courses/shared/git-model.png)
+- Pull Requests: When a feature is ready, the team member creates a pull request (PR) from their feature branch to the master branch. The PR includes a summary of changes and any relevant details.
+
+- Review and Merge: The project manager or another team member reviews the PR, ensuring code quality and functionality. If everything is satisfactory, the changes are merged into the master branch. If conflicts arise, they are resolved in the feature branch before merging. This process helps maintain a clean and stable master branch while allowing parallel development.
 
 ## Grading
 
